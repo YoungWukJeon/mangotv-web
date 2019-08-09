@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "cross-env ANALYZE=true next build",
+    "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production next start"
   },
   "repository": {
