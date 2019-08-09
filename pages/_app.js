@@ -8,13 +8,13 @@ import rootReducer from '../reducers';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from '../sagas';
 
-const mangoTV = ({ Component, store }) => {
+const MangoTV = ({ Component, store }) => {
   return (
     <Provider store={store}>
       <Head>
-        <title>mangoTV</title>
+        <title>MangoTV</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-        <meta name="keywords" content="mangoTV" />
+        <meta name="keywords" content="MangoTV" />
         <meta name="description" content="아프리카TV를 견제합니다" />
         <link href="/static/css/normalize.css" rel="stylesheet" />
       </Head>
@@ -23,7 +23,7 @@ const mangoTV = ({ Component, store }) => {
   )
 }
 
-mangoTV.propTypes = {
+MangoTV.propTypes = {
   Component: PropTypes.elementType.isRequired,
   store: PropTypes.object
 }
@@ -43,4 +43,4 @@ const configureStore = (initialState, options) => {
   return store;
 };
 
-export default withRedux(configureStore)(mangoTV);
+export default withRedux(configureStore)(MangoTV);
