@@ -17,6 +17,10 @@ const MangoTV = ({ Component, store }) => {
         <meta name="keywords" content="MangoTV" />
         <meta name="description" content="아프리카TV를 견제합니다" />
         <link href="/static/css/normalize.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
       </Head>
       <Component />
     </Provider>
