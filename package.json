@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@types/next": "^9.0.0",
-    "@types/node": "^12.12.17",
+    "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-redux": "^7.1.5",
     "@zeit/next-typescript": "^1.1.1",
     "compression-webpack-plugin": "^3.0.1",
-    "next": "^9.1.5",
+    "next": "^9.1.6",
     "next-redux-wrapper": "^4.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -26,8 +26,7 @@
     "typescript": "^3.7.3"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^9.1.5",
+    "@next/bundle-analyzer": "^9.1.6",
     "cross-env": "^6.0.3"
   }
 }
-
