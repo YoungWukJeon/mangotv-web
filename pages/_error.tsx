@@ -1,8 +1,11 @@
 import Error from 'next/error';
 import React from 'react';
 import PropTypes from 'prop-types';
+type ErrorComponent = {
+  statusCode: number;
+}
  
-const ErrorComponent = ({ statusCode }) => {
+const ErrorComponent = ({ statusCode = 400 }: ErrorComponent) => {
   console.log(`error: ${statusCode}`);
   return (
     <>
@@ -11,15 +14,7 @@ const ErrorComponent = ({ statusCode }) => {
   )
 };
 
-ErrorComponent.propTypes = {
-  statusCode: PropTypes.number
-}
-
-ErrorComponent.defaultProps = {
-  statusCode: 400
-}
-
-ErrorComponent.getInitialProps = async (context) => {
+ErrorComponent.getInitialProps = async (context: any) => {
   const statusCode = context.res ? context.res.statusCode : context.err ? context.err.statusCode : null;
   return {statusCode};
 }

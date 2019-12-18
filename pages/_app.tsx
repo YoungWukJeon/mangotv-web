@@ -1,0 +1,40 @@
+import React from "react";
+import Head from "next/head";
+
+import withRedux from "next-redux-wrapper";
+import { Provider } from "react-redux";
+import { createStore, compose, applyMiddleware } from 'redux';
+import rootReducer, { RootState } from "../modules";
+
+function MangoTV({ Component, store }) {
+  return (
+    <>
+      <Head>
+        <title>MangoTV</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+        <meta name="keywords" content="MangoTV" />
+        <meta name="description" content="아프리카TV를 견제합니다" />
+        <link href="/static/css/normalize.css" rel="stylesheet" />
+      </Head>
+      <Provider store={store}>
+        <Component />
+      </Provider>
+    </>
+  );
+}
+
+
+// HOC
+const configureStore = (initialState: RootState, options: any) => {
+  const middlewares = [];
+  const enhancer = process.env.NODE_ENV === 'production'
+    ? compose(applyMiddleware(...middlewares))
+    : compose(
+      applyMiddleware(...middlewares),
+      !options.isServer && typeof (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ !== 'undefined' ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__() : f => f,
+    );
+  const store = createStore(rootReducer, initialState, enhancer);
+  return store;
+};
+
+export default withRedux(configureStore)(MangoTV);
