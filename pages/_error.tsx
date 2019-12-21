@@ -1,6 +1,5 @@
 import Error from 'next/error';
 import React from 'react';
-import PropTypes from 'prop-types';
 type ErrorComponent = {
   statusCode: number;
 }

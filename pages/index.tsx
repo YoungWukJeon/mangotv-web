@@ -1,9 +1,12 @@
 import React from "react";
-import Counter from "../components/Counter";
+import LoginDialog from "../components/LoginDialog";
 
 function Index() {
   return (
-    <Counter />
+    <>
+      <LoginDialog />
+      {/* <Counter /> */}
+    </>
   );
 }
 
