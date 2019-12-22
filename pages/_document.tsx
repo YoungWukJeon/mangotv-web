@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import { ServerStyleSheet } from '../static/styles/themed-components';
+import { ServerStyleSheet } from 'styled-components';
 
 interface IProps {
   styleTags: Array<React.ReactElement<{}>>;
@@ -9,7 +9,7 @@ interface IProps {
 export default class MyDocument extends Document<IProps> {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage((App) => (props) =>
+    const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />),
     );
 
@@ -25,7 +25,7 @@ export default class MyDocument extends Document<IProps> {
           {this.props.styleTags}
         </Head>
         <body>
-          <Main/>
+          <Main />
           <NextScript />
         </body>
       </html>

@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import GlobalStyles from '../static/styles/global-styles';
-import { ThemeProvider } from '../static/styles/themed-components';
-import theme from '../static/styles/theme';
 
 import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
@@ -29,9 +27,7 @@ function MangoTV({ Component, store }) {
       </Head>
       <GlobalStyles />
       <Provider store={store}>
-        <ThemeProvider theme={theme}>
-          <Component />
-        </ThemeProvider>
+        <Component />
       </Provider>
     </>
   );
