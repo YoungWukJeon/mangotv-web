@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer, { RootState } from '../modules';
 
+import Layout from '../components/Layout';
+
 function MangoTV({ Component, store }) {
   return (
     <>
@@ -27,7 +29,9 @@ function MangoTV({ Component, store }) {
       </Head>
       <GlobalStyles />
       <Provider store={store}>
-        <Component />
+        <Layout>
+          <Component />
+        </Layout>
       </Provider>
     </>
   );
