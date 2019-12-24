@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
-import Header from './Header';
-import Menu from './Menu';
+import Header from '../Header';
+import Menu from '../Menu';
 
 type LayoutProps = {
   children: ReactElement;
@@ -48,11 +48,13 @@ const LayoutWrapper = styled.div`
       position: fixed;
       width: ${navWidth};
       height: 100vw;
+      outline: 1px solid black;
     }
 
     article {
       width: calc(100% - ${navWidth});
       margin-left: ${navWidth};
+      outline: 1px solid black;
     }
   }
 `;

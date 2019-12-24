@@ -9,7 +9,7 @@ function LoginDialog() {
   }, []);
 
   const onHide = useCallback(() => {
-    setShow(false)
+    setShow(false);
   }, [])
 
   return (

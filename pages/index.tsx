@@ -1,13 +1,11 @@
 import React from "react";
-// import LoginDialog from "../components/LoginDialog";
 
-function Index() {
+function Home() {
   return (
     <>
-      {/* <LoginDialog /> */}
-      <h1>HOME</h1>
+      <h1>Content</h1>
     </>
   );
 }
 
-export default Index;
+export default Home;

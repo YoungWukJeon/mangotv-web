@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer, { RootState } from '../modules';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Common/Layout';
 
 function MangoTV({ Component, store }) {
   return (
