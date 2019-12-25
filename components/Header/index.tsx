@@ -33,7 +33,6 @@ const LogoWrapper = styled.h1`
   transform: translateY(-50%);
 
   img {
-    outline: 1px solid red;
     width: 150px;
     height: 70px;
   }

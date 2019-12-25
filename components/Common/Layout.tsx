@@ -37,6 +37,7 @@ const LayoutWrapper = styled.div`
     top: 0;
     width: 100%;
     height: ${headerHeight};
+    border-bottom: 3px solid gray;
   }
 
   section {
@@ -47,14 +48,12 @@ const LayoutWrapper = styled.div`
     nav {
       position: fixed;
       width: ${navWidth};
-      height: 100vw;
-      outline: 1px solid black;
+      height: 100vh;
     }
 
     article {
       width: calc(100% - ${navWidth});
       margin-left: ${navWidth};
-      outline: 1px solid black;
     }
   }
 `;
