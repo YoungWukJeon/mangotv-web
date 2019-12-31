@@ -23,3 +23,5 @@ module.exports = withTypescript(
     }
   })
 )
+
+module.exports = { exportTrailingSlash: true }
