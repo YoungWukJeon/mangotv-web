@@ -21,7 +21,7 @@ const MenuList = styled.ul`
   height: 100%;
   margin: 0 auto;
 
-  li {
+  & > li {
     border-bottom: 1px solid gray;
     padding: 10px 0;
   }

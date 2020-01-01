@@ -26,9 +26,9 @@ const FooterWrapper = styled.li`
 
   h3 {
     font-size: 1rem;
-    margin: 0.5em 0;
+    margin-top: 0.5em;
   }
-
+  
   dt {
     margin-top: 1em;
   }
